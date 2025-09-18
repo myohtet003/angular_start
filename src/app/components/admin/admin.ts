@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Admin {
 
+  firstName = " myo htet";
+  courseName = "angular";
+
 }
