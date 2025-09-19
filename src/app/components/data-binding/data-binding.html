@@ -1,0 +1,45 @@
+<table style="width: 100%;">
+	<tr>
+		<td>
+			{{courseName}}
+		</td>
+		<td>
+			{{courseName}}
+		</td>
+		<td>
+			{{coursePrice}}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" [(ngModel)]="courseName" value="{{courseName}}" />
+		</td>
+		<td>
+			<input [type]="typeName" [maxLength]="maxLength" [minLength]="minChar" [disabled]="isDisabled" />
+		</td>
+		<td [class]="myClassName">
+			This is a simple text!
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<button style="background-color: skyblue; height: 50px; " (click)="sayHello()">Show Message</button>
+		</td>
+		<td>
+			<button (click)="changeCourse()"> change Course</button>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<select (change)="ChangeCity()">
+				<option>Magway</option>
+				<option>Chauk</option>
+				<option>Salay</option>
+			</select>
+		</td>
+		<td></td>
+	</tr>
+
+</table>
