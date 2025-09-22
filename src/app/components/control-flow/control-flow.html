@@ -1,0 +1,52 @@
+<table>
+	<tr>
+		<td>
+			@if(isVisible == true) {
+				<p> This param is visible</p>
+			}@else {
+				<p> This param is not visible</p>
+			}
+		</td>
+		<td>
+			<button (click) = "isShow()">Show</button>
+			<button (click) = "isHide()">Hide</button>
+		</td> 
+	</tr>
+	<tr>
+		<td>
+			@if(startMonthDate == "feb") {
+				<p> This month is February</p>
+			}@else if(startMonthDate == "mar") {
+				<p> This month is March</p>
+			}@else {
+				<p> This month is not February and March</p>
+			}
+		</td>
+		<td>
+
+			<input type="text" [(ngModel)] = "startMonthDate">
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<ul>
+				@for(item of cityList; track $index) {
+					<li>{{item}}</li>
+				}
+			</ul>
+		</td>
+		<td>
+			<select name="" id="">
+				@for(city of cityList; track $index) {
+
+					<option>
+						{{city}}
+					</option>
+				}
+			</select>
+		</td>
+	</tr>
+</table>
+
+
