@@ -14,6 +14,13 @@ export class ControlFlow {
 
   cityList: string[] = ["Yangon", "Mandalay", "Naypyitaw", "Mawlamyine"];
 
+  studentList: {name: string, city: string, isActive: boolean}[] = [
+    {name: "Aung Aung", city: "Yangon", isActive: false},
+    {name: "Kyaw Kyaw", city: "Mandalay", isActive: false},
+    {name: "Mya Mya", city: "Naypyitaw", isActive: true},
+    {name: "Ko Ko", city: "Mawlamyine", isActive: false},
+  ]
+
 
   isShow() {
     this.isVisible = true;

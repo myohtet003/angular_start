@@ -1,5 +1,5 @@
 <table>
-	<tr>
+	<!-- <tr>
 		<td>
 			@if(isVisible == true) {
 				<p> This param is visible</p>
@@ -46,7 +46,26 @@
 				}
 			</select>
 		</td>
-	</tr>
+	</tr> -->
+
+	<thead>
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>City</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for(student of studentList; track $index) {
+			<tr>
+				<td>{{ $index + 1 }}</td>
+				<td>{{ student.name }}</td>
+				<td>{{ student.city }}</td>
+				<td>{{ student.isActive ? 'Active' : 'Inactive' }}</td>
+			</tr>
+		}
+	</tbody>
 </table>
 
 

@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { ControlFlow } from './components/control-flow/control-flow';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 // import { RouterOutlet } from '@angular/router'; 
 // import { Admin } from './components/admin/admin';
@@ -10,7 +11,7 @@ import { ControlFlow } from './components/control-flow/control-flow';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ ControlFlow ],
+  imports: [ RouterLink, RouterOutlet ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
