@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-3" [ngClass]="div1ClassName()">
+		<p>Div 1 - {{div1ClassName()}}</p>
+	</div>
+	<div class="col-3" [ngStyle]="{'background-color': isDiv2Blue == true ? 'blue' : 'red'}">
+		<p>Div 2</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-3">
+		<button class="btn btn-success" (click) = "setBgClass('bg-success')">Success</button>
+		<button class="btn btn-danger" (click) = "setBgClass('bg-danger')">Fail</button>
+	</div>
+	<div class="col-3">
+		<button class="btn btn-primary" (click) = "toggleDiv2BgColor()">Change Bg</button>
+	</div>
+</div>
