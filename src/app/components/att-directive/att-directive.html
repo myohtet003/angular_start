@@ -16,3 +16,39 @@
 		<button class="btn btn-primary" (click) = "toggleDiv2BgColor()">Change Bg</button>
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-3">
+		Full Name => {{fullName |lowercase}} 
+		Full Name => {{fullName |uppercase}}
+		Full Name => {{fullName |titlecase}}
+	</div>
+
+	<div class="col-3">
+		rollList => {{rollNoList}}
+		<br>
+		rollSliceList => {{rollNoList | slice:1:4}}
+		<br>
+		rollSliceList => {{rollNoList | slice: 3}}
+	</div>
+	<div class="col-3">
+		studentObj => {{studentInfo}}
+		<br>
+		studentObj => {{studentInfo | json}}
+		
+		<br>
+		currentDate => {{currentDate}}
+		<br>
+		currentDate => {{currentDate | date:'fullDate'}}
+		<br>
+		currentDate => {{currentDate | date:'shortTime'}}
+		<br>
+		currentDate => {{currentDate | date:'hh:mm:ss a'}}
+		<br>
+		currentDate => {{currentDate | date:'dd/MM/yyyy'}}
+		<br>
+		currentDate => {{currentDate | date:'yyyy-MM-dd'}}
+		<br>
+		currentDate => {{currentDate | date:'EEEE, MMMM d, y'}}
+	</div>
+</div>
