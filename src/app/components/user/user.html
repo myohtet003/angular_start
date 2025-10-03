@@ -1,3 +1,52 @@
-<p>user works!</p>
-<input type="text" placeholder="Enter your name" />
-<p>Your name is:  </p>
+<div class="row">
+  <div class="col-6">
+    <table>
+      <tr>
+        <th>Email ID</th>
+        <th>Password</th>
+        <th>Full Name</th>
+        <th>Mobile No</th>
+      </tr>
+      @for(item of userLists; track $index) {
+      <tr>
+        <td>{{ item.emailId }}</td>
+        <td>{{ item.password }}</td>
+        <td>{{ item.fullName }}</td>
+        <td>{{ item.mobileNo }}</td>
+      </tr>
+      }
+    </table>
+  </div>
+  <div class="col-6">
+	<div class="row">
+
+		<div class="col-3">
+		  <label>Email:</label>
+		  <input type="text" [(ngModel)]="userObj.emailId" placeholder="Enter email or name" />
+		</div>
+		<div class="col-3">
+		  <label>Password:</label>
+		  <input type="text" [(ngModel)]="userObj.password" placeholder="Enter email or name" />
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-3">
+		  <label>Full Name:</label>
+		  <input type="text" [(ngModel)]="userObj.fullName" placeholder="Enter email or name" />
+		</div>
+		<div class="col-3">
+		  <label>Mobile No:</label>
+		  <input type="text" [(ngModel)]="userObj.mobileNo" placeholder="Enter email or name" />
+		</div>
+	</div>
+	<div class="row">
+	  <div class="col-6">
+		  <button class="btn btn-primary">Reset</button>
+	  </div>
+	  <div class="col-6">
+		  <button class="btn btn-primary" (click)="postUser()">Add User</button>
+	  </div>
+	</div>
+  </div>
+</div>
